@@ -2,6 +2,11 @@
 
 funny suming calculator
 
+#  Kullanım Klavuzu
+AC tuşu için sonuç ekranına Double Tap yapın.
+Eşittir için güneşe dokunun.
+Dikkat yalnızca toplama yapar.
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
