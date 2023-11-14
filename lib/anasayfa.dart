@@ -19,7 +19,16 @@ class _AnasayfaState extends State<Anasayfa> {
         child: Column(
           children: [
             GestureDetector(onTap: (){
-              print("Eşittir tuşuna basıldı");
+              setState(() {
+                print("Eşittir tuşuna basıldı");
+                List parcalar = ekran.split('+');
+                double toplam = 0;
+                for (String parca in parcalar) {
+                  double sayi = double.parse(parca);
+                  toplam += sayi;
+                }
+                ekran = toplam.toString();
+              });
             },
                 child: Stack(
               children: [
@@ -29,7 +38,10 @@ class _AnasayfaState extends State<Anasayfa> {
             ),
             GestureDetector(
                 onDoubleTap: (){
-              print("AC tuşuna basıldı");
+                  setState(() {
+                    print("AC tuşuna basıldı");
+                    ekran = "";
+                  });
             },
                 onLongPress: (){
               print("kopyalandı");
